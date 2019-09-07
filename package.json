@@ -1,0 +1,14 @@
+{
+  "name": "csvr",
+  "version": "1.0.0",
+  "description": "Small utility for parsing the rows of a CSV file",
+  "main": "csvr.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "John Egan",
+  "license": "MIT",
+  "devDependencies": {
+    "jest": "^24.9.0"
+  }
+}
