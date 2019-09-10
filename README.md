@@ -1,3 +1,3 @@
 # csvr
 
-Small utility for parsing the rows of a CSV file
+Small JavaScript utility for parsing the rows of a CSV file
