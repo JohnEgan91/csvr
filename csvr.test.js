@@ -55,6 +55,13 @@ test('Parse value with quote', function () {
   expect(parsedArray[1]).toBe('"test"')
 })
 
+test('Parse value with other quote char', function () {
+  var row = `_cat_____,_dog___`
+  var parsedArray = csvr.parseRow(row, { quoteChar: '_'})
+  expect(parsedArray[0]).toBe('cat__')
+  expect(parsedArray[1]).toBe('dog_')
+})
+
 test('Unparse with punctuation', function () {
   var values = ['Hello,', 'world', '!']
   var row = csvr.unparseRow(values)
@@ -101,4 +108,10 @@ test('Unparse with non-string values', function () {
   var values = [123, {name: 'John'}, true]
   var row = csvr.unparseRow(values)
   expect(row).toBe(`"123","[object Object]","true"`)
+})
+
+test('Unparse value with other quote char', function () {
+  var values = ['cat__', 'dog_']
+  var row = csvr.unparseRow(values, { quoteChar: '_' })
+  expect(row).toBe(`_cat_____,_dog___`)
 })

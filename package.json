@@ -1,6 +1,6 @@
 {
   "name": "csvr",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Small utility for parsing the rows of a CSV file",
   "main": "csvr.js",
   "scripts": {

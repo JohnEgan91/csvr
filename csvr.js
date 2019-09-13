@@ -84,9 +84,16 @@
 
     // Add quotes around each value
     var valuesWithQuotes = values.map(function (value) {
+
+      // Convert to string
       value = value ? value + '' : ''
-      var escaped = value.replace(/"/g, '""')
-      return QUOTE_CHAR + escaped + QUOTE_CHAR
+      
+      // Escape 
+      if (QUOTE_CHAR) {
+        var regex = new RegExp(QUOTE_CHAR, 'g')
+        var value = value.replace(regex, `${QUOTE_CHAR}${QUOTE_CHAR}`)
+      }
+      return QUOTE_CHAR + value + QUOTE_CHAR
     })
 
     // Turn into string with delimiter
