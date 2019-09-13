@@ -90,3 +90,9 @@ test('Unparse value with quote', function () {
   var row = csvr.unparseRow(values)
   expect(row).toBe(`"""","""test"""`)
 })
+
+test('Unparse with nulls', function () {
+  var values = ['', null, undefined]
+  var row = csvr.unparseRow(values)
+  expect(row).toBe(`"","",""`)
+})
