@@ -96,3 +96,9 @@ test('Unparse with nulls', function () {
   var row = csvr.unparseRow(values)
   expect(row).toBe(`"","",""`)
 })
+
+test('Unparse with non-string values', function () {
+  var values = [123, {name: 'John'}, true]
+  var row = csvr.unparseRow(values)
+  expect(row).toBe(`"123","[object Object]","true"`)
+})
