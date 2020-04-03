@@ -13,7 +13,7 @@ npm install csvr
 
 ## Usage
 ```js
-var row = 'dogs,cats,birds'
+var row = '"dogs","cats","birds"'
 var vals = csvr.parseRow(row)
 console.log(vals); // ["dogs", "cats", "birds"]
 
