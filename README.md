@@ -22,7 +22,7 @@ var rowAgain = csvr.unparseRow(vals)
 console.log(rowAgain); // "dogs","cats","birds"
 ```
 
-Both functions have an options second parameter which is an options object. This allows you to set the delimiter and quote character.
+Both functions have an optional second parameter which is an options object. This allows you to set the delimiter and quote character.
 ```js
 var row = '-dogs-|-cats-|-birds-'
 var options = {
